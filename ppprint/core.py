@@ -20,7 +20,7 @@ def _pformat_recursive(obj, spaces, indent, roll_up_last_line, start_indent=True
             output += repr(obj)
         else:
             output += '{\n'
-            for index, (key, value) in enumerate(sorted(obj.iteritems())):
+            for index, (key, value) in enumerate(obj.iteritems()):
                 output += left_margin + spacer + repr(key) + ': '
                 output += _pformat_recursive(
                     value,
